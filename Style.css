@@ -1,0 +1,627 @@
+/*media queries*/
+
+/*Separadas según medida para que calcule correctamente el estilo de cada sección.*/
+/*pantallas entre 300 y 769px*/
+@media (min-width: 300px) and (max-width: 769px) {
+
+    /* Protada*/
+    .cardsContainer {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        width: 90%;
+        height: 40vh;
+    }
+
+    .main {
+        min-width: 90%;
+        height: 16vh;
+    }
+
+    .theFront {
+        font-size: 0.9em;
+    }
+
+    .backButton {
+        width: 80%;
+        height: 50%;
+        outline-offset: .03em;
+        font-size: inherit;
+    }
+
+    /*secciones por estilo*/
+    .centralSection {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.6em;
+    }
+
+    .centralSection p {
+        width: 90%;
+        margin-bottom: 6%;
+    }
+
+    .slideshow-container {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .mySlides {
+        min-width: 80vw;
+        height: 80vh;
+    }
+
+    .centralSection h1 {
+        margin-top: 8%;
+    }
+
+    .lateralDiv h1 {
+        font-size: 0.8em;
+    }
+
+    .lateralDiv p {
+        font-size: 0.8em;
+    }
+
+    .contBotones {
+        height: 5%;
+    }
+
+    .zonaImagenes {
+        width: 100vw;
+        height: 30vh;
+    }
+
+    /*Menú de inicio*/
+    .dropDown{
+        margin-top: 2vh;
+        min-width: 10vw;
+        max-height: 5vh;
+    }
+
+    .dropDown:hover .content{
+        min-width: 50vw;
+    }
+
+    /*Estilos del Footer y los formularios*/
+    footer{
+        font-size: 0.3em;
+    }
+
+    .Form{
+        max-width: 4vw;
+        max-height: 4vh;
+        font-size: smaller;
+    }
+    form{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/*Pantallas a partir de 769px, hasta 1380 ya que nos daba problemas en algunos estilos.*/
+@media (min-width: 769px) and (max-width: 1380px) {
+
+    /* Portada */
+    .topSection {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cardsContainer {
+        flex-direction: column;
+        min-width: 48%;
+    }
+
+    .main {
+        align-self: center;
+        justify-self: center;
+        min-width: 80%;
+    }
+
+    .theFront {
+        font-size: 1.5em;
+    }
+
+    /*secciones por estilo*/
+    .centralSection {
+        flex-direction: column;
+        font-size: 0.6em;
+    }
+
+    .centralSection p {
+        width: 90%;
+        margin-bottom: 6%;
+
+    }
+
+    .slideshow-container {
+        width: 80vh;
+        height: 80vh;
+    }
+
+    .lateralDiv {
+        font-size: 0.8em;
+    }
+
+    .contBotones {
+        height: 5%;
+    }
+
+    .dropDown .content {
+        width: 40vw;
+        height: auto;
+    }
+
+}
+
+/*=================================================================*/
+
+
+/*Estilos generales*/
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1,
+p {
+    color: #ffffff;
+    align-self: center;
+    justify-self: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 1.6em;
+    max-width: fit-content;
+}
+
+p {
+    width: 65%;
+    padding: 0;
+    font-size: 1.2em;
+
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/*portada*/
+
+/*barra de navegación*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 8.5vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+.tituloPagina {
+    margin-right: 75%;
+    background: none;
+    font-size: 2rem;
+}
+
+
+/*clases que tienen alineamiento en comun*/
+footer,
+.lateralDiv,
+.topSection,
+.centralSection,
+.theCard,
+.theFront,
+.theBack,
+.cardsContainer,
+.slideshow-container,
+.zonaImagenes,
+.mySlides {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer,
+.topSection,
+.lateralDiv,
+.centralSection {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('img/fondoPrincipal.png');
+}
+
+
+
+/* Estilos para el menú desplegable*/
+.dropDown {
+    min-width: 4%;
+    margin-left: 2%;
+    justify-self: flex-start;
+}
+
+.dropDown p {
+    display: block;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 2%;
+    align-self: center;
+}
+
+.dropDown p:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+
+.dropDown .content {
+    display: none;
+    position: absolute;
+    width: 15%;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.dropDown:hover .content {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menuButton {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 8%;
+}
+
+.littleLine {
+    background-color: #ffffff;
+    width: 90%;
+    height: 20%;
+    border-radius: 10%;
+}
+
+
+
+
+/*Estilos para la portada*/
+.topSection h1 {
+    background-color: rgb(0, 0, 0, 0.0);
+}
+
+.main {
+    position: relative;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 50%;
+    text-align: center;
+    margin: 1vmin;
+}
+
+.theCard {
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+
+.theBack,
+.theCard:hover {
+    transform: rotateY(180deg);
+}
+
+
+.theCard,
+.theBack,
+.theFront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+}
+
+.theBack,
+.theFront {
+    backface-visibility: hidden;
+}
+
+.theFront {
+    border-color: #ffffff;
+    border-style: dashed;
+}
+
+.cardsContainer {
+    gap: 3%;
+}
+
+
+/*Estilos para el boton de las tarjetas*/
+/*nos tomamos la libertad de sacar este botón de un repositorio en internet*/
+
+.backButton {
+    --b: 0.2rem;
+    --s: .45em;
+    --color: #ffffff;
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .2s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #ffffff;
+    outline-offset: .6em;
+    font-size: 1.3rem;
+    border: 0;
+    align-self: center;
+    justify-self: center;
+    width: 52%;
+    height: 45%;
+}
+
+.backButton:hover,
+.backButton:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .01em;
+}
+
+.backButton:active {
+    background: var(--color);
+    color: #fff;
+}
+
+
+/*slideshow*/
+
+/* Estilos del slideshow */
+.slideshow-container {
+    min-width: 50vw;
+    min-height: 50vh;
+}
+
+.mySlides {
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.mySlides h1{
+    justify-self: center;
+    background: none;
+    padding: 3%;
+    border-color: solid #ffffff;
+    border-width: 5px;
+    border-style:solid;
+    width: 20%;
+}
+
+
+
+/* Estilos de los controles de navegación */
+.prev,
+.next {
+    cursor: pointer;
+    align-self: center;
+    padding: 0.5rem;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+    justify-self: flex-start;
+}
+
+.next {
+    justify-self: flex-end;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.3);
+}
+
+.fade {
+    display: none;
+}
+
+
+
+
+
+/*Estilos Comunes para las diferentes secciones*/
+
+
+/*Fondos según la Sección*/
+#arteUrbanoFondo {
+    background-image: url('img/arteUrbano/FondoArteUrbano.jpeg');
+}
+
+
+#expresionismoFondo {
+    background-image: url('img/expresionismo/Barcelo/elDiluvio.jpg');
+}
+
+#hiperrealismoFondo {
+    background-image: url('img/hipperrealismo/danielFirman/DANIEL-FIRMAN.jpg');
+}
+
+#impresionismoFondo {
+    background-image: url('img/impresionismo/gericault/BalsaDeLaMedusa.jpg');
+}
+
+#realismoFondo {
+    background-image: url('img/realismo/gisbert/fusilamientoDeTorrijos.jpg');
+}
+
+
+#surrealismoFondo {
+    background-image: url('img/surrealismo/craesbeek/LasTentacionesDeSanNicolas.jpg');
+}
+
+
+/*Estructura de cada sección*/
+.marco {
+    display: flex;
+    flex-direction: row;
+    width: 700vw;
+    height: 100vh;
+    color: white;
+}
+
+.zonaImagenes {
+    flex-wrap: wrap;
+    gap: 5%;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #ffffff;
+    border-radius: 5%;
+    width: 75vw;
+    height: 70vh;
+}
+
+.tarjeta {
+    cursor: none;  /*Escondemos el cursor del ratón para que nos deje ver bien la imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 27%;
+    height: 40%;
+    border-radius: 20%;
+}
+
+.tarjeta:hover {  /*Tarjetas que aumentan su tamaño al pasar el ratón por encima*/
+    border-radius: 0;
+    transform: scale(2.2);
+}
+
+.contBotones {
+    align-self: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+
+
+/*Estilos del Pie de página con los formularios*/
+footer{
+    flex-direction: row;
+    gap: 3%;
+    overflow: scroll;
+}
+
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 3%;
+}
+
+.feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    width: 45%;
+    height: 95%;
+    background:  rgb(255, 255, 255, 0.6);
+    font-family: sans-serif;
+    border-radius: 5%;
+    box-shadow: inset;
+}
+
+.feedback:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
+    background:  rgb(30, 144, 255, 0.7);;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 95%;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+input,
+option,
+textarea,
+select{
+    border-style: none;
+    background: none;
+    font-weight: bolder;
+}
+
+.formButton{
+    background-color: transparent;
+    border-color: solid black;
+    margin-top: 1%;
+}
+
+#comentariosContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    color: black;
+    align-self: center;
+    justify-self: center;
+    text-align: justify;
+    width: 100%;
+    overflow: scroll;
+}
+
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    color: #0000;
+    border: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5%;
+    width: 90%;
+    font-size: small;
+}
+.comment{
+    width: 90%;
+}
+
+.comment h1, .comment p{
+    background: none;
+    color: black;
+}

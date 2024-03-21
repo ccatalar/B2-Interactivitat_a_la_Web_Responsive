@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- En el head estamos recogiendo el estilo que tendrá la página, desde otro archivo css, además es donde configuramos la pestaña de la página. A este le estamos poniendo un icono, y un nombre que la identifica. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <!-- Esto recoge la información del archivo css, para ir dándole formato a la página. -->
+    <link rel="icon" type="image/png" href="img/FIdJE0oVIAULyCS.jpeg">
+    <!--Le ponemos un icono a la pestaña, no se nota mucho, ya que ponemos una imagen, y se ve muy pequeña, pero visualmente se ve mejor, que la predeterminada.-->
+    <title>Galería Insight</title>
+    <!--Le ponemos un nombre a la pestaña, para identificarla, y para saber dónde estamos navegando.-->
+</head>
+
+<body>
+    <!--El tema de esta web, es el arte de la pintura. Este es algo único, ya que por mucho que otros repliquen las obras, siempre tienen un toque distinto. Cada pintor tiene técnicas distintas y de expresión de forma distinta, haciendo que nunca se recree el arte de la misma forma.-->
+
+    <nav>
+        <!--Creamos un encabezado, estéticamente lo hemos dejado transparente, y dentro de este se encuentran tres apartados. Uno lleva al footer, donde se encuentra, un formulario, para contactarnos; los otros dos son links, que nos redirigen a las galerías de arte más conocidas.-->
+        <div class="dropDown">
+            <!--Creamos un contenedor, el cual es el que le da formato desde el css, con una classe a la información de dentro (dos contenedores más).-->
+            <div class="menuButton">
+                <!--Este contenedor es el que hace que se vean tres barras en la parte superior, izquierda. Más que nada, lo hemos puesto por estética, y para que se pueda identificar mejor, el menú desplegable.-->
+                <div class="littleLine"></div>
+                <!--Estas tres líneas crean tres contenedores, que llaman desde una classe a un formato que le hemos puesto en el archivo del estilo. Esto nos ayuda para identificar mejor el menú desplegable de la cabecera. -->
+                <div class="littleLine"></div>
+                <div class="littleLine"></div>
+            </div>
+            <div class="content">
+                <!--Este contenedor coge el formato desde la hoja de estilo, y contiene las diversas funciones que tendrá el menú desplegable, entre ellas se encuentra redirección, a otras páginas, o a la misma página, pero en otro apartado, específicamente al footer.-->
+                <p onclick="scr('pieDePagina')">Contacto</p>
+                <!--Al seleccionar la opción de "Contacto", nos redirige al footer, donde se encuentra nuestro formulario para que los usuarios se puedan contactar con nosotros.-->
+                <p onclick="redirect('https://www.museodelprado.es/en')">Museo del Prado</p>
+                <!--Llamamos a una función de javascript, para que al seleccionar, la opción de "Museo del prado" o "Louvre", se nos redirija a la página web oficial, de estos lugares, en una ventana nueva.-->
+                <p onclick="redirect('https://www.louvre.fr/en')">Louvre</p>
+                <!--Llamamos a una función de javascript, para que al seleccionar, la opción de "Museo del prado" o "Louvre", se nos redirija a la página web oficial, de estos lugares, en una ventana nueva.-->
+            </div>
+        </div>
+        <h1 class="tituloPagina"> Galería Insight </h1>
+        <!--Ponemos un título con el nombre de nuestra página, en el menú desplegable.-->
+    </nav>
+
+
+    <section class="topSection">
+        <!--En el siguiente apartado hacemos una sección, donde vamos a hacer un menú, que vaya hacia la parte del texto de cada género de arte que hemos puesto, al clicar encima. -->
+
+        <div class="cardsContainer">
+            <!--Desde la línea 33 a la línea 112,  se va a hacer lo mismo, pero con la diferencia del cambio del nombre, del título, según los géneros, y las imágenes, lo primero que hacemos es darle formato al texto con css.-->
+            <div class="main">
+                <!--Creamos un contenedor, que le da formato, a su contenido, el cual son dos contenedores más. Uno de estos es para la parte de delante del menú interactivo de los diferentes géneros de arte y la otra para la parte de atrás.-->
+                <div class="theCard">
+                    <div class="theFront">
+                        <!--Este contenedor nos permite ver los diversos géneros que hay a través de un título.-->
+                        <h1>Arte Urbano</h1>
+                    </div>
+                    <div class="theBack"
+                        style="background-image: url(img/arteUrbano/street-art-malaga-lagunillas-11-scaled.jpg);">
+                        <!--Este apartado se observa cuando nos situamos encima de uno de los géneros. Lo primero que podemos observar si hacemos esto, es que la tarjeta rota sobre si misma para enseñarnos la parte de atrás. -->
+                        <button class="backButton" onclick="scr('arteUrbano')">Arte Urbano</button>
+                        <!--Creamos un botón, con el título del género. Si clicamos encima de este, la función a la que llama nos llevará al apartado de la página pertinente. -->
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="theCard">
+                    <div class="theFront">
+                        <h1>Expresionismo</h1>
+                    </div>
+                    <div class="theBack" style="background-image: url('img/expresionismo/munch/elGrito.jpg');">
+                        <button class="backButton" onclick="scr('expresionismo')">
+                            Expresionismo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="theCard">
+                    <div class="theFront">
+                        <h1>Hiperrealismo</h1>
+                    </div>
+                    <div class="theBack"
+                        style="background-image: url('img/hipperrealismo/521043-com-maskiismall-cke.jpg');">
+                        <button class="backButton" onclick="scr('hiperrealismo')">
+                            Hiperrealismo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardsContainer">
+            <div class="main">
+                <div class="theCard">
+                    <div class="theFront">
+                        <h1>Impresionismo</h1>
+                    </div>
+                    <div class="theBack" style="background-image: url(img/impresionismo/Vangogh/starryNight.jpg);">
+                        <button class="backButton" onclick="scr('impresionismo')">
+                            Impresionismo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="theCard">
+                    <div class="theFront">
+                        <h1>Realismo</h1>
+                    </div>
+                    <div class="theBack"
+                        style="background-image: url(img/realismo/caravaggio/SalomeConLaTestaDelBattista.jpg);">
+                        <button class="backButton" onclick="scr('realismo')"> Realismo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="theCard">
+                    <div class="theFront">
+                        <h1>Surrealismo</h1>
+                    </div>
+                    <div class="theBack"
+                        style="background-image: url(img/surrealismo/craesbeek/LasTentacionesDeSanNicolas.jpg);">
+                        <button class="backButton" onclick="scr('surrealismo')">
+                            Surrealismo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Secciones por Estilo-->
+    <!--Secciones que almacenan el estilo acorde al movimiento artístivo, se repite la estructura en cada section. la clase marco nos estira la sección un 700% del ancho de la pantalla-->
+    <section id="arteUrbano" class="marco">
+        <div id="arteUrbanoFondo" class="centralSection">
+            <h1>Arte Urbano</h1>
+            <div class="slideshow-container">
+                <!--Contenedor del Carrusel de imagenes, llama a la función que con los parámetros, calcula a qué imagen tiene que desplazarse mediante los botones que se ven a continuación-->
+                <a class="prev" onclick="plusSlides('CarruselArteUrbano', -1)">&#10094;</a>
+                <!--Cada div nos redirige a la sección del artista que se muestra como imagen ejemplo. La propiedad Onclick llama a la funcion que, mediante 3 parametros, nos mueve el contenedor (vease el archivo js)
+                Esta estructura se repite en cada sección hasta el footer.-->
+                <div class="mySlides CarruselArteUrbano"
+                    style="background-image: url('img/arteUrbano/blu/blu-bologna-1.jpg');"
+                    onclick="scrSide('siguiente', 100, 'arteUrbano')">
+                    <h1>Blu</h1>
+                </div>
+                <div class="mySlides fade CarruselArteUrbano"
+                    style="background-image: url('img/arteUrbano/bansky/97059-Banksy-graffiti-concrete-wall-urban-robot-barcode-street-art.jpg');"
+                    onclick="scrSide('siguiente', 200, 'arteUrbano')">
+                    <h1>Bansky</h1>
+                </div>
+                <div class="mySlides fade CarruselArteUrbano"
+                    style="background-image: url('img/arteUrbano/keithHaring/luckyStrike.jpg');"
+                    onclick="scrSide('siguiente', 300, 'arteUrbano')">
+                    <h1>Keith Haring</h1>
+                </div>
+                <div class="mySlides fade CarruselArteUrbano"
+                    style="background-image: url('img/arteUrbano/osGemeos/Os-Gemeos (1).jpg');"
+                    onclick="scrSide('siguiente', 400, 'arteUrbano')">
+                    <h1>Os Gemeos</h1>
+                </div>
+                <div class="mySlides fade CarruselArteUrbano"
+                    style="background-image: url('img/arteUrbano/pixelPancho/streetartnews_pixelpancho_infart.jpg');"
+                    onclick="scrSide('siguiente', 500, 'arteUrbano')">
+                    <h1>Pixel Pancho</h1>
+                </div>
+                <div class="mySlides fade CarruselArteUrbano"
+                    style="background-image: url('img/arteUrbano/vhils/Vhils-Street-art-carving-Lisbon-Portugal.jpg');"
+                    onclick="scrSide('siguiente', 600, 'arteUrbano')">
+                    <h1>Vhils</h1>
+                </div>
+                <a class="next" onclick="plusSlides('CarruselArteUrbano', 1)">&#10095;</a>
+            </div>
+            <p>También conocido como arte callejero o graffiti, el arte urbano es una forma de expresión artística que
+                se desarrolla en entornos urbanos, a menudo de manera ilegal. Utiliza diversas técnicas como el
+                graffiti, el esténcil, los murales y las instalaciones para transmitir mensajes políticos, sociales o
+                culturales. El arte urbano ha ganado reconocimiento como una forma legítima de arte contemporáneo y ha
+                influido en la cultura popular y el diseño urbano.</p>
+        </div>
+        <!--Los div de la clase lateralDiv están configurados para ocupar toda la pantalla, y de ésta manera aprovechar bien el alineamiento.-->
+        <div class="lateralDiv">
+            <h1>Blu</h1>
+            <div class="zonaImagenes">
+                <!--Las tarjetas nos permiten visualizar el trabajo de cada artista, al pasar el ratón por encima, las mismas crecen para darnos una vista ampliada-->
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/blu/08.jpeg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/blu/blu-bologna-1.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/blu/blu-street-art-five.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/blu/street_art_blu_11.jpeg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/blu/street_art_blu_22.jpeg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/blu/https___hypebeast.com_image_2011_05_blu-mural-in-italy.jpg);">
+                </div>
+            </div>
+            <!--Pequeña descripción sobre cada artista-->
+            <p>Blu es un artista urbano italiano conocido por sus murales y animaciones callejeras que abordan temas
+                sociales y políticos. Su estilo distintivo combina técnicas de graffiti con elementos de animación,
+                creando obras llamativas y provocativas que han ganado reconocimiento internacional.</p>
+
+                <!--Esta sección nos sitúa los botones que nos permitirán navegar al pie de la sección de cada artista-->
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 0, 'arteUrbano')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 200, 'arteUrbano')">&#10095;</button>
+            </div>
+        </div>
+        <div class="lateralDiv">
+            <h1>Bansky</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/bansky/97059-Banksy-graffiti-concrete-wall-urban-robot-barcode-street-art.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/bansky/banksy-17.webp);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/bansky/banksy-baloon-girl-painting-wqhd-1440p-wallpaper.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/bansky/loveIsInTheAir.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/bansky/Banksy_cu.jpg);"></div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url(img/arteUrbano/bansky/snow3-1024x680-1920x1200.jpg);"></div>
+            </div>
+            <p>Banksy es un misterioso artista urbano británico cuya identidad permanece en secreto. Sus obras satíricas
+                y políticamente cargadas se han vuelto icónicas en todo el mundo. Utiliza esténciles para crear imágenes
+                impactantes en lugares públicos, desafiando las normas sociales y políticas.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 1, 'arteUrbano')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'arteUrbano')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 300, 'arteUrbano')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Keith Haring</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/keithHaring/53bad3d39932792b7d5751d1a646ac8a.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/keithHaring/MAshup.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/keithHaring/luckyStrike.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/keithHaring/wp1996374.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/keithHaring/keith-haring-hero-1.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/keithHaring/1741788_1_l.jpg);"></div>
+            </div>
+            <p>Keith Haring fue un influyente artista urbano estadounidense que emergió en la década de 1980. Conocido
+                por sus figuras simplificadas y líneas vibrantes, Haring abordaba temas como el activismo social, la
+                sexualidad y la vida urbana. Su arte se puede encontrar en murales, lienzos y objetos de la vida
+                cotidiana.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 2, 'arteUrbano')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'arteUrbano')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 400, 'arteUrbano')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv" id="5">
+            <h1>Os Gemeos</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/osGemeos/140520_872pn_os_gemeos_boston_sn1250.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/osGemeos/7dfbe8ff1da1db0768bf03fe46c99260.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/osGemeos/aryz-os-gemeos-mural-street-art-lodz-poland.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/osGemeos/brooklyn-street-art-os-gemeos-13-jaime-rojo-10-09.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/osGemeos/os-gemeos.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/osGemeos/Os-Gemeos\ \(1\).jpg);"></div>
+            </div>
+            <p>Los gemelos brasileños Os Gemeos son conocidos por su estilo único y colorido que combina elementos del
+                graffiti con la cultura brasileña y el arte pop. Sus murales y pinturas a gran escala están llenos de
+                personajes imaginativos y mundos fantásticos que reflejan su amor por el arte callejero y la comunidad.
+            </p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 3, 'arteUrbano')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'arteUrbano')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 500, 'arteUrbano')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Pixel Pancho</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/pixelPancho/3db923e01a9de1f8c2d5771eb4e2b278.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/pixelPancho/streetartnews_pixelpancho_dusseldorf-3.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/pixelPancho/streetartnews_pixelpancho_infart.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/pixelPancho/streetartnews_pixelpancho_trulydesign_bolzano-4.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/pixelPancho/streetartnews_pixelpancho_santurce_sanjuan_puertorico-4.jpeg);">
+                </div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url(img/arteUrbano/pixelPancho/streetartnews_pixelpancho_losangeles_brandedarts-7.jpg);">
+                </div>
+            </div>
+            <p>Pixel Pancho es un artista urbano italiano conocido por su fusión de técnicas de graffiti con elementos
+                de arte mural y diseño digital. Su trabajo a menudo presenta robots antropomórficos y paisajes
+                surrealistas que exploran temas como la tecnología, la naturaleza y la identidad.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'arteUrbano')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'arteUrbano')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 600, 'arteUrbano')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Vhils</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/vhils/de63c00e4cb4e8d4d147c498f74069cb.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/vhils/p45_1239_360-der.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/vhils/Vhils-04.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/vhils/vhils-couverture.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/arteUrbano/vhils/Vhils-Street-art-carving-Lisbon-Portugal.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/arteUrbano/vhils/Vhils_Norway_21.jpg);"></div>
+            </div>
+            <p>Vhils es el seudónimo del artista urbano portugués Alexandre Farto, conocido por su enfoque innovador en
+                la escultura y el grabado urbano. Utilizando técnicas de excavación y tallado, crea obras de arte
+                impactantes en muros urbanos al revelar capas ocultas de la superficie, explorando la relación entre el
+                individuo y el entorno urbano.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'arteUrbano')">&#10094;</button>
+                <button class="next" onclick="scrSide('inicio', 0, 'arteUrbano')">inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="expresionismo" class="marco">
+        <div id="expresionismoFondo" class="centralSection">
+            <h1>Expresionismo</h1>
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides('expresionismoCarrusel', -1)">&#10094;</a>
+                <div class="mySlides expresionismoCarrusel"
+                    style="background-image: url('img/expresionismo/Barcelo/capillaDelSantisimo.jpg');"
+                    onclick="scrSide('siguiente', 100, 'expresionismo')">
+                    <h1>Barceló</h1>
+                </div>
+                <div class="mySlides fade expresionismoCarrusel"
+                    style="background-image: url('img/expresionismo/ensor/esqueletosDisputandoseUnArenque.jpg');"
+                    onclick="scrSide('siguiente', 200, 'expresionismo')">
+                    <h1>Ensor</h1>
+                </div>
+                <div class="mySlides fade expresionismoCarrusel"
+                    style="background-image: url('img/expresionismo/grigoriev/gemelas.jpg');"
+                    onclick="scrSide('siguiente', 300, 'expresionismo')">
+                    <h1>Grigoriev</h1>
+                </div>
+                <div class="mySlides fade expresionismoCarrusel"
+                    style="background-image: url('img/expresionismo/munch/huespedesNoInvitados.jpg');"
+                    onclick="scrSide('siguiente', 400, 'expresionismo')">
+                    <h1>Munch</h1>
+                </div>
+                <div class="mySlides fade expresionismoCarrusel"
+                    style="background-image: url('img/expresionismo/paulaRego/jovenConUnFeto.jpg');"
+                    onclick="scrSide('siguiente', 500, 'expresionismo')">
+                    <h1>Paula Rego</h1>
+                </div>
+                <div class="mySlides fade expresionismoCarrusel"
+                    style="background-image: url('img/expresionismo/TivadarKosztka/viejoPescador.jpg');"
+                    onclick="scrSide('siguiente', 600, 'expresionismo')">
+                    <h1>Tivadar Kosztka</h1>
+                </div>
+                <a class="next" onclick="plusSlides('expresionismoCarrusel', 1)">&#10095;</a>
+            </div>
+            <p>Surgido a principios del siglo XX en Alemania, el expresionismo es un movimiento artístico que enfatiza
+                la expresión subjetiva de los sentimientos y las emociones del artista. Los artistas expresionistas
+                utilizan colores vibrantes, pinceladas enérgicas y formas distorsionadas para representar la angustia,
+                la ansiedad y el conflicto emocional. Este movimiento abarca tanto la pintura como la escultura, el cine
+                y la literatura.</p>
+        </div>
+        <div class="lateralDiv">
+            <h1>Miquel Barceló i Artigues</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/expresionismo/Barcelo/brisements.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/Barcelo/capillaDelSantisimo.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/Barcelo/cupulaDeLaSalaXX.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/Barcelo/cupulaDeLaSalaXXGroundView.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/Barcelo/elDiluvio.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/Barcelo/machoCabrioyCabra.jpg);">
+                </div>
+            </div>
+            <p>Miquel Barceló es un reconocido artista español conocido por su estilo expresionista y su versatilidad en
+                diferentes medios, incluyendo la pintura, la escultura y la cerámica. Su obra se caracteriza por una
+                paleta de colores vibrantes y una técnica gestual que transmite emociones intensas y una conexión
+                profunda con la naturaleza y la cultura mediterránea.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 0, 'expresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 200, 'expresionismo')">&#10095;</button>
+            </div>
+        </div>
+        <div class="lateralDiv">
+            <h1>James Ensor</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/ensor/autorretratoConMáscaras.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/ensor/esqueletosDisputandoseUnArenque.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/ensor/history-espressionismo-01.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/ensor/James-Ensor-Masks-Looking-at-a-Tortoise.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/ensor/laEntradaDeCristoABruselas.jpg);"></div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url(img/expresionismo/ensor/James-Ensor-Sothebys.jpg);"></div>
+            </div>
+            <p>James Ensor fue un pintor belga precursor del expresionismo, reconocido por sus obras surrealistas y
+                macabras. Sus pinturas y grabados están llenos de personajes grotescos y máscaras, explorando temas como
+                la muerte, la religión y la decadencia social con un estilo distintivo y una paleta de colores audaz.
+            </p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 1, 'expresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'expresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 300, 'expresionismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Boris Grigoriev</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/expresionismo/grigoriev/BorisGrigoriev.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/grigoriev/epicerie.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/grigoriev/gemelas.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/grigoriev/intimite.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/grigoriev/2013_CKS_01125_0065_000\(boris_grigoriev_russian_village104806\).jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/grigoriev/7057351e1045cf4fbe667ee861030f98.jpg);">
+                </div>
+            </div>
+            <p>Boris Grigoriev fue un destacado pintor y dibujante ruso asociado con el expresionismo. Su obra captura
+                la atmósfera de la Rusia rural y la vida cotidiana del pueblo, con retratos emotivos y paisajes
+                evocadores que reflejan una profunda conexión con la tierra y el alma rusa.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 2, 'expresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'expresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 400, 'expresionismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv" id="5">
+            <h1>Edvard Munch</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/munch/anochecerEnLaCalleKarlJohan.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/munch/ansiedad.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/munch/autorretratoEnElInfierno.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/munch/elGrito.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/munch/melancolia.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/munch/huespedesNoInvitados.jpg);">
+                </div>
+            </div>
+            <p>Edvard Munch fue un influyente pintor noruego considerado uno de los precursores del expresionismo. Es
+                más conocido por su obra maestra "El grito", que encapsula la ansiedad y la angustia existencial del
+                individuo moderno. Su estilo expresionista se caracteriza por pinceladas audaces, colores intensos y una
+                exploración profunda de las emociones humanas.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 3, 'expresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'expresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 500, 'expresionismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Paula Rego</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/paulaRego/blancanievesYSuMadrastra.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/paulaRego/elJardinDelInterrogador.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/paulaRego/f9eafe1c690761c40120e9b2ef6a20e961da4d21_1620\ \(1\).jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/paulaRego/jovenConUnFeto.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/paulaRego/laFamilia.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/paulaRego/paula-rego-snowwhite.jpg);"></div>
+            </div>
+            <p>Paula Rego es una destacada artista portuguesa cuya obra se enmarca dentro del expresionismo figurativo.
+                Sus pinturas y grabados exploran temas como la identidad femenina, el poder y la política a través de
+                una narrativa visual rica en simbolismo y metáfora. Rego utiliza una paleta de colores vibrantes y una
+                técnica de pincelada expresiva para transmitir emociones y provocar reflexiones en el espectador.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'expresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'expresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 600, 'expresionismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Csontvary Kosztka Tivadar</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/TivadarKosztka/223cd2dca2cbf5edb6defb81baccdb42.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/TivadarKosztka/800px-Csontváry_Szerelmesek_találkozása.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/TivadarKosztka/Baalbek.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/TivadarKosztka/shipwreck.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/expresionismo/TivadarKosztka/unCuentoDeHadas.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/expresionismo/TivadarKosztka/viejoPescador.jpg);">
+                </div>
+            </div>
+            <p>Tivadar Kosztka, también conocido como Tivadar Csontváry Kosztka, fue un pintor húngaro considerado uno
+                de los pioneros del expresionismo en Europa Central. Su obra se caracteriza por paisajes exuberantes y
+                evocadores, retratos místicos y una paleta de colores intensos que reflejan una profunda conexión con la
+                naturaleza y la espiritualidad.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 5, 'expresionismo')">&#10094;</button>
+                <button class="next" onclick="scrSide('inicio', 0, 'expresionismo')">inicio</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="hiperrealismo" class="marco">
+        <div id="hiperrealismoFondo" class="centralSection">
+            <h1>Hiperrealismo</h1>
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides('hiperrealismoCarrusel', -1)">&#10094;</a>
+                <div class="mySlides hiperrealismoCarrusel"
+                    style="background-image: url('img/hipperrealismo/antonioLopez/atocha.jpg');"
+                    onclick="scrSide('siguiente', 100, 'hiperrealismo')">
+                    <h1>Antonio López</h1>
+                </div>
+                <div class="mySlides fade hiperrealismoCarrusel"
+                    style="background-image: url('img/hipperrealismo/chuckClose/clinton.jpg');"
+                    onclick="scrSide('siguiente', 200, 'hiperrealismo')">
+                    <h1>Chuck Close</h1>
+                </div>
+                <div class="mySlides fade hiperrealismoCarrusel"
+                    style="background-image: url('img/hipperrealismo/danielFirman/obstaculosDeLaModaActual.jpg');"
+                    onclick="scrSide('siguiente', 300, 'hiperrealismo')">
+                    <h1>Daniel Firman</h1>
+                </div>
+                <div class="mySlides fade hiperrealismoCarrusel"
+                    style="background-image: url('img/hipperrealismo/isabelQuintanilla/cultura.jpg');"
+                    onclick="scrSide('siguiente', 400, 'hiperrealismo')">
+                    <h1>Isabel Quintanilla</h1>
+                </div>
+                <div class="mySlides fade hiperrealismoCarrusel"
+                    style="background-image: url('img/hipperrealismo/maryPratt/maryblabla.jpg');"
+                    onclick="scrSide('siguiente', 500, 'hiperrealismo')">
+                    <h1>Mary Pratt</h1>
+                </div>
+                <div class="mySlides fade hiperrealismoCarrusel"
+                    style="background-image: url('img/hipperrealismo/ronMueck/maskII.jpg');"
+                    onclick="scrSide('siguiente', 600, 'hiperrealismo')">
+                    <h1>Ron Mueck</h1>
+                </div>
+                <a class="next" onclick="plusSlides('hiperrealismoCarrusel', 1)">&#10095;</a>
+            </div>
+            <p>El hiperrealismo es un estilo artístico que surgió en la década de 1960 y busca representar la realidad
+                de manera extremadamente detallada y precisa, a menudo alcanzando un nivel de fidelidad fotográfica. Los
+                artistas hiperrealistas utilizan técnicas meticulosas de dibujo y pintura para crear obras que parecen
+                fotografías, pero con una sensibilidad emocional y estética propia del arte tradicional.</p>
+        </div>
+        <div class="lateralDiv">
+            <h1>Antonio Lopez</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/antonioLopez/atocha.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/antonioLopez/granVia.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/antonioLopez/lavaboYEspejo.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/antonioLopez/madridDesdeLasTorresBlancas.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/antonioLopez/44e739d9191ddfb484e73a9b3fe7df0a.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/antonioLopez/f.elconfidencial.com_original_8bf_bb8_ecd_8bfbb8ecd3e6cf9d6fd87aaafdfc0536.jpg);">
+                </div>
+            </div>
+            <p>Antonio López García es un destacado pintor y escultor español conocido por su enfoque hiperrealista en
+                la representación de paisajes urbanos, retratos y naturalezas muertas. Su meticulosa atención al detalle
+                y su habilidad para capturar la luz y la textura han hecho de él uno de los principales exponentes del
+                hiperrealismo contemporáneo.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 0, 'hiperrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 200, 'hiperrealismo')">&#10095;</button>
+            </div>
+        </div>
+        <div class="lateralDiv">
+            <h1>Chuck Close</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/chuckClose/clinton.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/chuckClose/linda.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/chuckClose/mark.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/chuckClose/selfPortrait.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/chuckClose/2011_NYR_02631_0025_000\(chuck_close_self-portrait\).jpg);">
+                </div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url(img/hipperrealismo/chuckClose/d5d10fe471db6bb221dd2e536b58098d--chuck-close-portraits-chuck-close-paintings.jpg);">
+                </div>
+            </div>
+            <p>Chuck Close fue un influyente artista estadounidense reconocido por sus grandes retratos hiperrealistas.
+                Utilizando técnicas de pintura y grabado, Close crea retratos detallados que revelan cada rasgo facial
+                con una precisión casi fotográfica. Su enfoque meticuloso y su exploración de la percepción visual lo
+                convierten en una figura destacada en el movimiento hiperrealista.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 1, 'hiperrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'hiperrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 300, 'hiperrealismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Daniel Firman</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/danielFirman/57da2ab6-3a25-44f4-8e22-9ac85612167e_1200_1600.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/danielFirman/DANIEL-FIRMAN.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/danielFirman/danielFIrman.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/danielFirman/obstaculosDeLaModaActual.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/danielFirman/Photo_1333x2000_2-1.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/danielFirman/web_Excentrique.jpg);"></div>
+            </div>
+            <p>Daniel Firman es un escultor francés conocido por sus obras hiperrealistas que desafían la percepción del
+                espectador. Sus esculturas de figuras humanas y animales a menudo se distorsionan o se presentan en
+                situaciones surrealistas, creando una sensación de extrañeza y asombro en el espectador.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 2, 'hiperrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'hiperrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 400, 'hiperrealismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Isabel Quintanilla</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/isabelQuintanilla/8f7fc78ca36e7c602b2b418821ed70b5.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/isabelQuintanilla/atardecerEnElEstudio.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/isabelQuintanilla/cultura.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/isabelQuintanilla/Isabel-Quintanilla-010.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/isabelQuintanilla/laLubina.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/isabelQuintanilla/oto_o_1992_leo_sobre_tabla_130_x_100_cm_galerie_brockstedt_berl_n_hamburgo.jpg);">
+                </div>
+            </div>
+            <p>Isabel Quintanilla fue una pintora española reconocida por sus obras hiperrealistas que exploran la vida
+                cotidiana y los paisajes urbanos. Su estilo detallado y su habilidad para capturar la luz y la atmósfera
+                han hecho de ella una figura destacada en el movimiento hiperrealista español.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 3, 'hiperrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'hiperrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 500, 'hiperrealismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Mary Pratt</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/maryPratt/art-books_43_mary-pratt-another-province-of-canada-1978-contextual.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/maryPratt/art-books_43_mary-pratt-barby-dress-she-made-herself-1986-contextual.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/maryPratt/art-books_43_mary-pratt-red-currant-jelly-1972-contextual.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/maryPratt/C2uSWVNk2IN1kO08s.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/maryPratt/maryblabla.jpg);">
+                </div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url(img/hipperrealismo/maryPratt/image35102-1024x598.jpg);"></div>
+            </div>
+            <p>Mary Pratt fue una destacada pintora canadiense conocida por sus pinturas hiperrealistas de objetos
+                domésticos y escenas cotidianas. Su obra se caracteriza por una atención meticulosa al color, la luz y
+                la textura, creando imágenes vívidas y cautivadoras que celebran la belleza en lo ordinario.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'hiperrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'hiperrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 600, 'hiperrealismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Ron Mueck</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/ronMueck/maskII.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/ronMueck/mass.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/ronMueck/Mueck2018_web_header.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/ronMueck/mujerConRamas.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/hipperrealismo/ronMueck/papaMuerto.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/hipperrealismo/ronMueck/Two-Women-Ron-Mueck.jpg);"></div>
+            </div>
+            <p>Ron Mueck es un escultor australiano reconocido por sus impresionantes esculturas hiperrealistas de
+                figuras humanas en escala alterada. Sus obras exploran la condición humana y la vulnerabilidad del
+                cuerpo, utilizando detalles meticulosos y una sensibilidad emocional para crear impactantes obras de
+                arte que desafían la percepción del espectador.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 5, 'hiperrealismo')">&#10094;</button>
+                <button class="next" onclick="scrSide('inicio', 0, 'hiperrealismo')">inicio</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="impresionismo" class="marco">
+        <div id="impresionismoFondo" class="centralSection">
+            <h1>Impresionismo</h1>
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides('impresionismoCarrusel', -1)">&#10094;</a>
+                <div class="mySlides impresionismoCarrusel"
+                    style="background-image: url('img/impresionismo/gericault/decapit.jpg');"
+                    onclick="scrSide('siguiente', 100, 'impresionismo')">
+                    <h1>Gericault</h1>
+                </div>
+                <div class="mySlides fade impresionismoCarrusel"
+                    style="background-image: url('img/impresionismo/goya/laMajaDesnuda.jpg');"
+                    onclick="scrSide('siguiente', 200, 'impresionismo')">
+                    <h1>Goya</h1>
+                </div>
+                <div class="mySlides fade impresionismoCarrusel"
+                    style="background-image: url('img/impresionismo/monet/863a01a275f3833ba283b222efd37ae3.jpg');"
+                    onclick="scrSide('siguiente', 300, 'impresionismo')">
+                    <h1>Monet</h1>
+                </div>
+                <div class="mySlides fade impresionismoCarrusel"
+                    style="background-image: url('img/impresionismo/REnoir/renoirCarrusel.jpg');"
+                    onclick="scrSide('siguiente', 400, 'impresionismo')">
+                    <h1>Renoir</h1>
+                </div>
+                <div class="mySlides fade impresionismoCarrusel"
+                    style="background-image: url('img/impresionismo/sorolla/familiaTaller.jpg');"
+                    onclick="scrSide('siguiente', 500, 'impresionismo')">
+                    <h1>Sorolla</h1>
+                </div>
+                <div class="mySlides fade impresionismoCarrusel"
+                    style="background-image: url('img/impresionismo/Vangogh/vanGoghCena.jpg');"
+                    onclick="scrSide('siguiente', 600, 'impresionismo')">
+                    <h1>Van Gogh</h1>
+                </div>
+                <a class="next" onclick="plusSlides('impresionismoCarrusel', 1)">&#10095;</a>
+            </div>
+            <p>El impresionismo es un movimiento artístico que surgió en la década de 1870 y se caracteriza por capturar
+                las impresiones visuales y emocionales del artista sobre un momento o escena, enfatizando la luz, el
+                color y la atmósfera. Los impresionistas buscaban representar las percepciones fugaces y transitorias,
+                utilizando pinceladas sueltas y la aplicación directa del color.</p>
+        </div>
+        <div class="lateralDiv">
+            <h1>Theodore Gericault</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/gericault/14cef18ceecfc205c23f814f864bfd40.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/gericault/37e898087737d0e73299e0b6bb83d634.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/gericault/BalsaDeLaMedusa.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/gericault/decapit.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/gericault/La_monomane_de_l_envie_Gericault.jpeg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/gericault/maxresdefault.jpg);">
+                </div>
+            </div>
+            <p>Théodore Géricault fue un influyente pintor francés del siglo XIX, conocido tanto por sus obras
+                impresionistas como por su trabajo en el movimiento romántico. Su obra más famosa, "La balsa de la
+                Medusa", es un ejemplo destacado de su habilidad para capturar el movimiento y la emoción en sus
+                pinturas.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 0, 'impresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 200, 'impresionismo')">&#10095;</button>
+            </div>
+        </div>
+        <div class="lateralDiv">
+            <h1>Francisco Jose de Goya y Lucientes</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/goya/Goya3.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/goya/goya4.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/goya/GoyaBrujas.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/goya/GoyaDiablo.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/goya/goyaGatos.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/goya/GoyaPluton.jpg);"></div>
+            </div>
+            <p>Francisco de Goya fue un destacado pintor español cuyo trabajo abarcó varios estilos y movimientos
+                artísticos, incluido el impresionismo. Aunque es más conocido por sus obras del periodo romántico, como
+                "Los fusilamientos del 3 de mayo", Goya también experimentó con técnicas impresionistas en algunas de
+                sus pinturas tardías.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 1, 'impresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'impresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 300, 'impresionismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Oscar-Claude Monet</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/impresionismo/monet/0kzZcq.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/monet/551544-new-monet-desktop-wallpaper-1920x1080.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/monet/863a01a275f3833ba283b222efd37ae3.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/monet/h9quVk.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/monet/ac90eda9de293e390308beb8f3ca3076.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/monet/monetFloresAzules.jpg);">
+                </div>
+            </div>
+            <p>Claude Monet es considerado uno de los fundadores del movimiento impresionista y uno de sus
+                representantes más destacados. Conocido por sus pinturas de paisajes, jardines y series de obras como
+                "Nenúfares", Monet capturó la atmósfera y la luz cambiante con pinceladas sueltas y colores vibrantes.
+            </p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 2, 'impresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'impresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 400, 'impresionismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Pierre-Auguste Renoir</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/REnoir/DT3128.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/REnoir/renoir1.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/REnoir/renoir2.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/REnoir/renoir3.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/REnoir/renoir4.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/REnoir/renoirCarrusel.jpg);"></div>
+            </div>
+            <p>Pierre-Auguste Renoir fue otro destacado pintor impresionista francés, conocido por sus retratos
+                luminosos y sus escenas de la vida cotidiana. Sus obras, como "Baile en el Moulin de la Galette" y
+                "Mujer con sombrilla", reflejan su habilidad para capturar la alegría y la belleza de la vida moderna
+                con pinceladas suaves y colores vibrantes.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 3, 'impresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'impresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 500, 'impresionismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Joaquín Sorolla</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url(img/impresionismo/sorolla/sorolla1.jpg);"></div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/sorolla/sorolla2.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/sorolla/sorolla3.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/sorolla/sorolla4.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/sorolla/sorolla5.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/sorolla/familiaTaller.jpg);">
+                </div>
+            </div>
+            <p>Joaquín Sorolla fue un destacado pintor español impresionista conocido por sus luminosas representaciones
+                de escenas de playa, jardines y retratos. Su dominio de la luz y el color, así como su técnica fluida y
+                suelta, lo convierten en uno de los pintores impresionistas más destacados de España.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'impresionismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'impresionismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 600, 'impresionismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Vincent van Gogh</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/Vangogh/Autoretrato.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/Vangogh/cangrejo.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/Vangogh/esqueleto.jpg);">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/Vangogh/vanGoghCena.jpg);">
+                </div>
+                <div class="tarjeta" style="background-image: url(img/impresionismo/Vangogh/starryNight.jpg);"></div>
+                <div class="tarjeta"
+                    style="background-image: url(img/impresionismo/Vangogh/vanPrisioneros.jpg);">
+                </div>
+            </div>
+            <p>Aunque Vincent van Gogh no fue formalmente parte del movimiento impresionista, su trabajo está
+                estrechamente relacionado con él y ha sido influenciado por su estilo. Conocido por sus pinceladas
+                gruesas y expresivas y su uso audaz del color, Van Gogh capturó la emoción y la belleza de la naturaleza
+                y la vida rural en obras como "La noche estrellada" y "Los girasoles".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 5, 'impresionismo')">&#10094;</button>
+                <button class="next" onclick="scrSide('inicio', 0, 'impresionismo')">inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="realismo" class="marco">
+        <div id="realismoFondo" class="centralSection">
+            <h1>Realismo</h1>
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides('realismoCarrusel', -1)">&#10094;</a>
+                <div class="mySlides realismoCarrusel"
+                    style="background-image: url('img/realismo/caravaggio/TheIncredulityofSaintThomas.jpg');"
+                    onclick="scrSide('siguiente', 100, 'realismo')">
+                    <h1>Caravaggio</h1>
+                </div>
+                <div class="mySlides fade realismoCarrusel"
+                    style="background-image: url('img/realismo/courbet/cour3.jpg');"
+                    onclick="scrSide('siguiente', 200, 'realismo')">
+                    <h1>Courbet</h1>
+                </div>
+                <div class="mySlides fade realismoCarrusel"
+                    style="background-image: url('img/realismo/fernandPelez/ElVendedorDeVioletas.jpeg');"
+                    onclick="scrSide('siguiente', 300, 'realismo')">
+                    <h1>Fernand Pelez</h1>
+                </div>
+                <div class="mySlides fade realismoCarrusel"
+                    style="background-image: url('img/realismo/gisbert/11_desembarco_de_los_puritanos_en_america.jpg');"
+                    onclick="scrSide('siguiente', 400, 'realismo')">
+                    <h1>Gisbert</h1>
+                </div>
+                <div class="mySlides fade realismoCarrusel"
+                    style="background-image: url('img/realismo/millet/a220_5.jpg');"
+                    onclick="scrSide('siguiente', 500, 'realismo')">
+                    <h1>Millet</h1>
+                </div>
+                <div class="mySlides fade realismoCarrusel"
+                    style="background-image: url('img/realismo/wyeth/Trenzas.jpg');"
+                    onclick="scrSide('siguiente', 600, 'realismo')">
+                    <h1>Wyeth</h1>
+                </div>
+                <a class="next" onclick="plusSlides('realismoCarrusel', 1)">&#10095;</a>
+            </div>
+            <p>El realismo es un movimiento artístico que se desarrolló en el siglo XIX y se caracteriza por la
+                representación precisa y fiel de la realidad, sin idealización ni exageración. Los artistas realistas se
+                esfuerzan por capturar la apariencia objetiva del mundo, a menudo centrándose en temas cotidianos,
+                sociales o políticos.</p>
+        </div>
+        <div class="lateralDiv">
+            <h1>Michelangelo Merisi da Caravaggio</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/caravaggio/TheIncredulityofSaintThomas.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/caravaggio/DavidWithTheHeadOfGoliath.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/caravaggio/JuditYHolofernes.jpg');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/caravaggio/SalomeConLaTestaDelBattista.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/caravaggio/St_Jerome.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/caravaggio/TheDeposition.jpg');"></div>
+            </div>
+            <p>Nacido en 1571 en Milán, Italia, Caravaggio revolucionó la pintura de su época con su uso innovador de la
+                luz y la sombra, así como su representación realista de temas religiosos y profanos. Su vida estuvo
+                marcada por controversias y conflictos personales, incluyendo acusaciones de asesinato. Su obra maestra
+                incluye "La vocación de San Mateo" y "La incredulidad de Santo Tomás".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 0, 'realismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 200, 'realismo')">&#10095;</button>
+            </div>
+        </div>
+        <div class="lateralDiv">
+            <h1>Jean Désiré Gustave Courbet</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url('img/realismo/courbet/courbetNiña.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/courbet/elOrigenDelMundo.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/courbet/TheDesperateMan.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/courbet/theWinnowers.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/courbet/cour3.jpg');"></div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url('img/realismo/courbet/gustave_courbet-self_portrait_with_pipe-1849-trivium-art-history.jpg');">
+                </div>
+            </div>
+            <p>Nacido en 1819 en Ornans, Francia, Courbet desafió las convenciones artísticas de su tiempo al centrarse
+                en la representación honesta de la vida rural y la clase trabajadora. Su estilo directo y su enfoque en
+                temas cotidianos le valieron el reconocimiento como uno de los principales artistas de su generación.
+                Obras destacadas incluyen "El taller del pintor" y "El origen del mundo".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 1, 'realismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'realismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 300, 'realismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Fernand Pelez</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/fernandPelez/ElVendedorDeVioletas.jpeg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/fernandPelez/f8a7dbf86f49a7b6f29a860837bf4ad6.png');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/fernandPelez/fernand-pelez-painting-france-wooarts-12.jpg');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/fernandPelez/fernand-pelez-painting-france-wooarts-14.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/realismo/fernandPelez/NiñoDeLaCalle.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/realismo/fernandPelez/SanseAisle.jpg');"></div>
+            </div>
+            <p>Pelez nació en 1843 en París, Francia. Su obra se caracteriza por su atención al detalle y su capacidad
+                para capturar la humanidad en las escenas de la vida cotidiana. Su interés por los temas sociales lo
+                llevó a retratar a mendigos, trabajadores y otros marginados urbanos con empatía y realismo. Entre sus
+                obras más conocidas se encuentran "Gente del trabajo" y "Los emigrantes".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 2, 'realismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'realismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 400, 'realismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Joan Manuel Gisbert</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/gisbert/11_desembarco_de_los_puritanos_en_america.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/realismo/gisbert/fusilamientoDeTorrijos.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/realismo/gisbert/hallazgoDeMoises.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/gisbert/ultimosMomentos.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/gisbert/b87a6a594ccdc0a85950c41245fdc34cj.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/gisbert/historia-arte-pintura_388723207_119681387_1706x1280.jpg');">
+                </div>
+            </div>
+            <p>Nacido en 1834 en Valencia, España, Gisbert recibió reconocimiento por su habilidad para capturar la
+                realidad con precisión y detalle. Sus pinturas históricas, en particular, reflejan su compromiso con la
+                representación fiel de los eventos y personajes del pasado. Entre sus obras más destacadas se encuentra
+                "La ejecución de Torrijos y sus compañeros en la playa de Málaga".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 3, 'realismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'realismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 500, 'realismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Jean François Millet</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url('img/realismo/millet/a220_5.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/millet/millet27.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/millet/LaMuerteYElLeñador.jpeg');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/millet/O-Angelus-Jean-Francois-Millet.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/realismo/millet/sheepfold-moonlight-jean-francois-millet.webp');">
+                </div>
+                <div class="tarjeta" id="uno" style="background-image: url('img/realismo/millet/DP124093.jpg');"></div>
+            </div>
+            <p>Nacido en 1814 en Gruchy, Francia, Millet es conocido por sus poderosas representaciones de la vida rural
+                y los campesinos. Su obra a menudo refleja un profundo sentido de conexión con la tierra y una simpatía
+                por los trabajadores agrícolas. Entre sus obras más famosas se encuentran "Las espigadoras" y "El
+                Ángelus".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'realismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'realismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 600, 'realismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Andrew Wyeth</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url('img/realismo/wyeth/elIntruso.jpeg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/wyeth/ElMundoDeCristina.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/wyeth/Trenzas.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/wyeth/vientoDelMar.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/realismo/wyeth/andrew-wyeth-her-room.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/realismo/wyeth/d5683379a.jpg');"></div>
+            </div>
+            <p>Nacido en 1917 en Chadds Ford, Pensilvania, Wyeth se destacó por su habilidad para representar paisajes y
+                escenas cotidianas con un alto grado de detalle y emotividad. Su estilo meticuloso y su uso del
+                simbolismo lo convirtieron en uno de los artistas más influyentes de su generación. Entre sus obras más
+                famosas se encuentran "Christina's World" y "Winter 1946".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 5, 'realismo')">&#10094;</button>
+                <button class="next" onclick="scrSide('inicio', 0, 'realismo')">inicio</button>
+            </div>
+        </div>
+
+    </section>
+    <section id="surrealismo" class="marco">
+        <div id="surrealismoFondo" class="centralSection">
+            <h1>Surrealismo</h1>
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides('surrealismoCarrusel', -1)">&#10094;</a>
+                <div class="mySlides surrealismoCarrusel"
+                    style="background-image: url('img/surrealismo/craesbeek/joos_craesbeeck_man_surprised.jpg');"
+                    onclick="scrSide('siguiente', 100, 'surrealismo')">
+                    <h1>Craesbeeck</h1>
+                </div>
+                <div class="mySlides fade surrealismoCarrusel"
+                    style="background-image: url('img/surrealismo/Dali/jmy-elephants-in-the-style-of-salvador-dali_2020-02-03T12-53-54.jpg');"
+                    onclick="scrSide('siguiente', 200, 'surrealismo')">
+                    <h1>Dalí</h1>
+                </div>
+                <div class="mySlides fade surrealismoCarrusel"
+                    style="background-image: url('img/surrealismo/Delvaux/skeletons-in-an-office-1944.jpg');"
+                    onclick="scrSide('siguiente', 300, 'surrealismo')">
+                    <h1>Delvaux</h1>
+                </div>
+                <div class="mySlides fade surrealismoCarrusel"
+                    style="background-image: url('img/surrealismo/escher/93cf4ae56fd6f6b4fe2022e9c5e32249.jpg');"
+                    onclick="scrSide('siguiente', 400, 'surrealismo')">
+                    <h1>Escher</h1>
+                </div>
+                <div class="mySlides fade surrealismoCarrusel"
+                    style="background-image: url('img/surrealismo/marguitte/8a210ae8a90e9c1c3dfa0626d3675726.jpg');"
+                    onclick="scrSide('siguiente', 500, 'surrealismo')">
+                    <h1>Magritte</h1>
+                </div>
+                <div class="mySlides fade surrealismoCarrusel"
+                    style="background-image: url('img/surrealismo/miro/guernica.jpg');"
+                    onclick="scrSide('siguiente', 600, 'surrealismo')">
+                    <h1>Miró</h1>
+                </div>
+                <a class="next" onclick="plusSlides('surrealismoCarrusel', 1)">&#10095;</a>
+            </div>
+            <p>Surgido en la década de 1920, el surrealismo es un movimiento artístico y literario que busca explorar el
+                funcionamiento del inconsciente y liberar la creatividad a través de la escritura automática y la
+                representación de imágenes oníricas y fantásticas. Las obras surrealistas a menudo desafían la lógica y
+                la realidad convencional, creando un mundo de símbolos y metáforas.</p>
+        </div>
+        <div class="lateralDiv">
+            <h1>Joos Van Craesbeeck</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/craesbeek/29fddc601af9b65d0e9e66288031c26c.jpg');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/craesbeek/5f50173bccfe931e8467ac7dbecb624c.jpg');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/craesbeek/joos_craesbeeck_man_surprised.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/craesbeek/102170_0_joos-van-craesbeeck-die-versuchung-des-hl-antonius.jpg');">
+                </div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/craesbeek/LasTentacionesDeSanNicolas.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/craesbeek/Soldiers-and-Women-Joos-van-Craesbeeck-Oil-Painting.jpg');">
+                </div>
+            </div>
+            <p>Nacido alrededor de 1605 en Bruselas, Craesbeeck trabajó en Amberes y se especializó en la pintura de
+                escenas de taberna, fiestas campesinas y temas satíricos. Su estilo distintivo se caracteriza por
+                figuras exageradas y expresiones dramáticas. Entre sus obras más conocidas se encuentran "El flautista"
+                y "Interior de una taberna".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 0, 'surrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 200, 'surrealismo')">&#10095;</button>
+            </div>
+        </div>
+        <div class="lateralDiv">
+            <h1>Salvador Dalí</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Dali/293195e0-6c20-4f14-b238-00afd74726b3.1c1ba8230809d3db8c784cf958c92de3.jpeg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/Dali/300219.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/Dali/4166563.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Dali/Figure\ at\ a\ Window\ I.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Dali/jmy-elephants-in-the-style-of-salvador-dali_2020-02-03T12-53-54.jpg');">
+                </div>
+                <div class="tarjeta" id="uno" style="background-image: url('img/surrealismo/Dali/art-dali-01.jpeg');">
+                </div>
+            </div>
+            <p>Nacido en 1904 en Figueres, España, Dalí es conocido por sus obras surrealistas que desafían la lógica y
+                la realidad. Su capacidad para representar paisajes oníricos y objetos simbólicos lo convirtió en uno de
+                los artistas más reconocibles de su tiempo. Entre sus obras más famosas se encuentran "La persistencia
+                de la memoria" y "La tentación de San Antonio".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 1, 'surrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'surrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 300, 'surrealismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>André Delvaux</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Delvaux/42084f41d74d95d6f082eb171f404d4d.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/Delvaux/Delvaux\ 1.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Delvaux/phases-of-the-moon-iii-1942.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Delvaux/skeletons-in-an-office-1944.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/Delvaux/the-skeleton-has-the-shell-1944.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/Delvaux/shadows-1965.jpg');"></div>
+            </div>
+            <p>Nacido en 1897 en Antheit, Bélgica, Delvaux desarrolló un estilo distintivo que fusionaba elementos
+                surrealistas con una técnica precisa y detallada. Sus obras a menudo presentan figuras humanas
+                solitarias en entornos urbanos misteriosos y evocadores. Entre sus obras más destacadas se encuentran
+                "El tren de la noche" y "El país de las sirenas".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 2, 'surrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'surrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 400, 'surrealismo')">&#10095;</button>
+            </div>
+
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Maurits Cornelis Escher</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/escher/3318ccc8666e9bbf89543ab1131544b2.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/escher/93cf4ae56fd6f6b4fe2022e9c5e32249.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/escher/ascending-and-descending-escher-1960.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/escher/spirals.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/escher/picMCEscherMFA180130_1193w.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/escher/uwypkb8qn0r11.jpg');"></div>
+            </div>
+            <p>Nacido en 1898 en Leeuwarden, Países Bajos, Escher es famoso por sus grabados y litografías que desafían
+                la lógica y la realidad. Su habilidad para crear ilusiones ópticas y estructuras imposibles lo convirtió
+                en un pionero del arte matemático y surrealista. Entre sus obras más famosas se encuentran "Relatividad"
+                y "Mano con esfera reflejada".</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 3, 'surrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'surrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 500, 'surrealismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>René Magritte</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta" style="background-image: url('img/surrealismo/marguitte/161578.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/marguitte/8a210ae8a90e9c1c3dfa0626d3675726.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/marguitte/91968.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/marguitte/cdda26038b7ea2ee8350e680226575d9.jpg');">
+                </div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/marguitte/wp8122673.jpg');"></div>
+                <div class="tarjeta" id="uno"
+                    style="background-image: url('img/surrealismo/marguitte/la-lampe-philosophique-magritte-3200x0.jpg');">
+                </div>
+            </div>
+            <p>Magritte fue un pintor surrealista belga conocido por sus imágenes evocadoras y desconcertantes que
+                desafían la lógica y la realidad. Su obra a menudo presenta objetos comunes en contextos inesperados,
+                cuestionando la naturaleza de la percepción y la representación visual. Magritte es famoso por obras
+                como "La traición de las imágenes", que presenta una pipa con la leyenda "Esto no es una pipa"</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 4, 'surrealismo')">&#10094;</button>
+                <button class="prev" onclick="scrSide('inicio', 0, 'surrealismo')">Inicio</button>
+                <button class="next" onclick="scrSide('siguiente', 600, 'surrealismo')">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="lateralDiv">
+            <h1>Joan Miró</h1>
+            <div class="zonaImagenes">
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/miro/04339b69bc40f10fb6e3e171e6595344.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/miro/guernica.jpg');"></div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/miro/IX.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/miro/wassily-kandinsky12801024.jpg');"></div>
+                <div class="tarjeta"
+                    style="background-image: url('img/surrealismo/miro/Joan-miro-self-portrait.jpeg');"></div>
+                <div class="tarjeta" style="background-image: url('img/surrealismo/miro/the-farm-1922.jpg');"></div>
+            </div>
+            <p>Miró fue un pintor y escultor español conocido por su estilo abstracto y su exploración de lo
+                surrealista. Sus obras a menudo presentan formas orgánicas y colores vibrantes en composiciones
+                aparentemente espontáneas. Miró fue un miembro destacado del movimiento surrealista y su obra ha
+                influido en la pintura abstracta moderna.</p>
+            <div class="contBotones">
+                <button class="prev" onclick="scrSide('anterior', 5, 'surrealismo')">&#10094;</button>
+                <button class="next" onclick="scrSide('inicio', 0, 'surrealismo')">inicio</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer donde encontraremos 2 formularios, uno de contacto y otro para la introducción de comentarios.-->
+    <footer id='pieDePagina'>
+        <div class="feedback">
+            <h2>Suscríbete a nuestra Newsletter</h2>
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Introduce tu Nombre"
+                    required>
+                <div class="underline"></div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+                <div class="underline"></div>
+                <label for="movimiento">Movimiento Artístico:</label>
+                <select id="movimiento" name="movimiento" required>
+                    <option value="Arte Urbano">Arte Urbano</option>
+                    <option value="Impresionismo">Impresionismo</option>
+                    <option value="Expresionismo">Expresionismo</option>
+                    <option value="Realismo">Realismo</option>
+                    <option value="Surrealismo">Surrealismo</option>
+                    <option value="Hiperrealismo">Hiperrealismo</option>
+                </select>
+                <button class="formButton" type="button" onclick="contacto()">Enviar</button>
+            </form>
+        </div>
+        <div class="feedback">
+            <h2>Déjanos un comentario</h2>
+            <form id="commentForm">
+                <label for="nombreComentario">Nombre:</label>
+                <input type="text" id="nombreComentario" name="nombreComentario" placeholder="Introduce tu nombre"
+                    required>
+                <div class="underline"></div>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe aqui tu comentario"
+                    required></textarea>
+
+                <button class="formButton" type="button" onclick="comment()">Enviar Comentario</button>
+            </form>
+            <div id="comentariosContainer">
+
+            </div>
+        </div>
+    </footer>
+    <script src="Scripts.js"></script>
+</body>
+
+</html>
